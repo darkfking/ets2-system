@@ -72,7 +72,7 @@ class RozpiskiController extends Controller
 
         $kraje = array("Polska", "Niemcy", "Holandia", "Belgia");
         $losuj_kraj=array_rand($podstawka,2);
-        for($i = 0; $i<20; $i++) {
+        for($i = 0; $i<5; $i++) {
             $rozpiska = new Rozpiski;
             $rozpiska->kraj1 = $podstawka[array_rand($podstawka)];
             $rozpiska->miasto1 = '';

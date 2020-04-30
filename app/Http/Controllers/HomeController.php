@@ -29,7 +29,7 @@ class HomeController extends Controller
     {
         $firm = Firms::all();
         $ogolne = DB::table('users')->get();
-        $rozpiski = Rozpiski::where('status', '3')->get();
+        $rozpiski = Rozpiski::where('status', '2')->get();
         return view('home')->with(compact(['firm', 'ogolne', 'rozpiski']));
     }
 

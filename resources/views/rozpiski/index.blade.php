@@ -94,7 +94,7 @@ $liczba = 0;
                         <td>{{$item->kmztowarem}}</td>
                         <td>{{$item->koszty}}</td>
                         <td>{{$item->paliwo}}</td>
-                        <td><a class="btn btn-success btn-block" href="{{route('rozpiski.edit', $item)}}">Uzupełnij i oddaj</a></td>
+                        <td><a class="btn btn-warning btn-block" href="{{route('rozpiski.edit', $item)}}">Popraw i oddaj</a></td>
                     </tr>
                     @endforeach
                 </tbody>

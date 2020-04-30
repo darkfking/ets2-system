@@ -16,13 +16,13 @@ class Rozpiskis extends Migration
         Schema::create('rozpiskis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('kraj1');
-            $table->string('miasto1');
+            $table->string('miasto1')->nullable();
             $table->string('kraj2');
-            $table->string('miasto2');
-            $table->string('kmpuste');
-            $table->string('kmztowarem');
-            $table->string('koszty');
-            $table->string('paliwo');
+            $table->string('miasto2')->nullable();
+            $table->string('kmpuste')->nullable();
+            $table->string('kmztowarem')->nullable();
+            $table->string('koszty')->nullable();
+            $table->string('paliwo')->nullable();
             $table->string('kierowca');
             $table->string('status');
             $table->timestamps();
