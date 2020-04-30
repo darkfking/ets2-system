@@ -13,7 +13,7 @@ class Rozpiski extends Migration
      */
     public function up()
     {
-        Schema::create('rozpiski', function (Blueprint $table) {
+        Schema::create('rozpiskis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('kraj1');
             $table->string('miasto1');
@@ -36,7 +36,7 @@ class Rozpiski extends Migration
      */
     public function down()
     {
-        Schema::drop('rozpiski');
+        Schema::drop('rozpiskis');
     }
 }
 
