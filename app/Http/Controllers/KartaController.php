@@ -30,6 +30,16 @@ class KartaController extends Controller
         return view('karta.index')->with(compact(['karta', 'ciezarowka', 'naczepa']));
     }
 
+    public function mapy (User $user)
+    {
+        return view('karta.mapy', compact('user'));
+    }
+
+    public function updatemapy(Request $request, User $user)
+    {
+        $user->update($request->all());
+        return redirect()->route('karta');
+    }
     /**
      * Show the form for creating a new resource.
      *

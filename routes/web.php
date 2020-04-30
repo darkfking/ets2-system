@@ -118,6 +118,15 @@ Route::put('karta/zmienHaslo/{user}', [
     'as' => 'karta.zmienHaslo'
 ]);
 
+Route::get('karta/mapy/{user}', [
+    'uses' => 'KartaController@mapy',
+    'as' => 'karta.mapy'
+]);
+
+Route::put('karta/mapyup/{user}', [
+    'uses' => 'KartaController@updatemapy',
+    'as' => 'karta.updatemapy'
+]);
 
 //rozpiski
 

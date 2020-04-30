@@ -87,6 +87,7 @@
         <br>@if($item->promods == '1') PROMODS <input type="checkbox" name="" id="" checked disabled> @else PROMODS <input type="checkbox" name="" id="" disabled> @endif
         <br>@if($item->rusmapa == '1') Rusmapa <input type="checkbox" name="" id="" checked disabled> @else Rusmapa <input type="checkbox" name="" id="" disabled> @endif
         </h3>
+        <a class="btn btn-info btn-block" href="{{route('karta.mapy', $item)}}">Aktualizuj DLC i mody</a>
       </div>
     </div>
     @endforeach
