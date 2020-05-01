@@ -24,7 +24,7 @@
 
                     <div class="form-group">
                         {!! Form::label('mody', "Wymagane mody: ") !!}
-                        {!! Form::text('mody', $firm->mody, ['class'=>'form-control']) !!}
+                        {!! Form::textarea('mody', $firm->mody, ['class'=>'form-control']) !!}
                     </div>
 
                     <div class="form-group">

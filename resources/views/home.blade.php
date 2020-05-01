@@ -51,7 +51,7 @@
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col">Nick</th>
-                    <th scope="col">Spalone paliwo</th>
+                    <th scope="col">Średnie spalanie</th>
                   </tr>
                 </thead>
                 <tbody>
