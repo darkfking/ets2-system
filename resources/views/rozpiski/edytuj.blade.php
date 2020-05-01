@@ -13,6 +13,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Numer trasy</th>
+                        <th scope="col">Kierowca</th>
                         <th scope="col">Kraj początkowy</th>
                         <th scope="col">Miasto początkowe</th>
                         <th scope="col">Kraj końcowy</th>
@@ -28,6 +29,7 @@
                     @foreach ($allroz as $item)
                     <tr>
                         <th scope="row">{{$item->id}}</th>
+                        <td>{{$item->kierowca }}</td>
                         <td>{{$item->kraj1}}</td>
                         <td>{{$item->miasto1}}</td>
                         <td>{{$item->kraj2}}</td>
