@@ -38,6 +38,12 @@
                         </div>
                     </div>
 
+                    <div class="row mb-3">  
+                        <div class="col-12">
+                            <a class="btn btn-primary btn-block" href="{{route('rozpiski.edytuj')}}">Edytuj rozpiski</a>
+                        </div>
+                    </div>
+
                     <div class="row mb-3">
                         <div class="col-12">
                             @foreach($firm as $item) 

@@ -33,7 +33,7 @@ $nr=0;
                         @foreach ($rozpiski as $item)
                         <?php $nr++; ?>
                           <tr>
-                            <th scope="row">{{$nr}}</th>
+                            <th scope="row">{{$item->id}}</th>
                             <td>{{$item->kraj1}}</td>
                             <td>{{$item->miasto1}}</td>
                             <td>{{$item->kraj2}}</td>

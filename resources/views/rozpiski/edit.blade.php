@@ -17,21 +17,35 @@
                         </div>
                     @endif
                     {!! Form::model($rozpiska, ['route' => ['rozpiski.update', $rozpiska], 'method' => 'PUT']) !!}
+                    @if(Auth::user()->ranga == 'Admin')
+                    <div class="form-group">
+                        {!! Form::label('kraj1', "Kraj początkowy: ") !!}
+                        {!! Form::text('kraj1', $rozpiska->kraj1, ['class'=>'form-control']) !!}
+                    </div>
+                    @else
                     <div class="form-group">
                         {!! Form::label('kraj1', "Kraj początkowy: ") !!}
                         {!! Form::text('kraj1', $rozpiska->kraj1, ['class'=>'form-control', 'disabled' => 'disabled']) !!}
                     </div>
+                    @endif
                     <div class="form-group">
                         {!! Form::label('miasto1', "Miasto początkowe: ") !!}
-                        {!! Form::text('miasto1', $rozpiska->miasto1, ['class'=>'form-control']) !!}
+                        {!! Form::select('miasto1', $miasta, null, ['class'=>'form-control']) !!}
                     </div>
+                    @if(Auth::user()->ranga == 'Admin')
+                    <div class="form-group">
+                        {!! Form::label('kraj2', "Kraj końcowy: ") !!}
+                        {!! Form::text('kraj2', $rozpiska->kraj2, ['class'=>'form-control']) !!}
+                    </div>
+                    @else 
                     <div class="form-group">
                         {!! Form::label('kraj2', "Kraj końcowy: ") !!}
                         {!! Form::text('kraj2', $rozpiska->kraj2, ['class'=>'form-control', 'disabled' => 'disabled']) !!}
                     </div>
+                    @endif
                     <div class="form-group">
                         {!! Form::label('miasto2', "Miasto końcowe: ") !!}
-                        {!! Form::text('miasto2', $rozpiska->miasto2, ['class'=>'form-control']) !!}
+                        {!! Form::select('miasto2', $miasta, null, ['class'=>'form-control']) !!}
                     </div>
 
                     <div class="form-group">

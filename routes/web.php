@@ -143,6 +143,11 @@ Route::get('rozpiski', [
     'uses' => 'RozpiskiController@index',
     'as' => 'rozpiski.index'
 ]); 
+Route::get('rozpiski/edytuj', [
+    'uses' => 'RozpiskiController@edytuj',
+    'as' => 'rozpiski.edytuj'
+]); 
+
 Route::get('rozpiski/admin', [
     'uses' => 'RozpiskiController@admin',
     'as' => 'rozpiski.admin'
