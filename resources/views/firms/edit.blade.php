@@ -33,6 +33,11 @@
                     </div>
 
                     <div class="form-group">
+                        {!! Form::label('koszty', "Koszty firmy: ") !!}
+                        {!! Form::textarea('koszty', $firm->koszty, ['class'=>'form-control']) !!}
+                    </div>
+
+                    <div class="form-group">
                         {!! Form::submit('Zapisz', ['class'=>'btn btn-primary']) !!}
                     </div>
                     {!! Form::close() !!}

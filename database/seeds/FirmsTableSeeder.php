@@ -16,6 +16,7 @@ class FirmsTableSeeder extends Seeder
         $firm->regulamin = 'Brak regulaminu';
         $firm->mody = 'Brak wymaganych modów';
         $firm->poradniki = 'Brak poradników';
+        $firm->koszty = 'Brak kosztów';
         $firm->konto = 0;
         $firm->stawkapusta = 0.1;
         $firm->stawkaladunek = 0.5;

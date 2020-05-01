@@ -59,6 +59,23 @@
             </div>
         </div>
     </div>
+    <div class="row justify-content-center mb-4">     
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2>Koszty firmy</h2>
+                </div>
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif       
+                    <p class="text-center">{{ $item->koszty }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
     @if(Auth::user()->ranga == 'Admin')
         <a class="btn btn-info btn-block" href="{{route('firms.edit', $item)}}">Edytuj dane</a>
     @endif

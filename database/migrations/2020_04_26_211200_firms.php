@@ -18,6 +18,7 @@ class Firms extends Migration
             $table->mediumtext('regulamin');
             $table->string('mody');
             $table->mediumtext('poradniki');
+            $table->mediumtext('koszty');
             $table->double('konto');
             $table->float('stawkapusta');
             $table->float('stawkaladunek');

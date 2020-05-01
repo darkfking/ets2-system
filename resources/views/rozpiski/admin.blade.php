@@ -17,7 +17,7 @@ $nr=0;
                           <tr>
                             <th scope="col">Numer trasy</th>
                             <th scope="col">Kraj początkowy</th>
-                            <th scope="col">Miasto poczatkowe</th>
+                            <th scope="col">Miasto początkowe</th>
                             <th scope="col">Kraj końcowy</th>
                             <th scope="col">Miasto końcowe</th>
                             <th scope="col">Kilometry puste</th>
