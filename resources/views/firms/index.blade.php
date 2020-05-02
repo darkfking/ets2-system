@@ -113,7 +113,7 @@
             </td>
             <td>{{$item->kilometry}} km</td>
             <td>{{$item->paliwo}} l</td>
-            <td>@if($item->kilometry != 0){{ number_format($item->kilometry / $item->paliwo, 2)}} @endif l/km</td>
+            <td>@if($item->kilometry != 0){{ number_format($item->paliwo / $item->kilometry *100, 2)}} @endif l/km</td>
             @if(Auth::user()->ranga == 'Admin')
             <td>
             {!! Form::model($item, ['route' => ['firms.delete', $item], 'method' => 'DELETE']) !!}
