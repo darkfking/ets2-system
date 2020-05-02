@@ -18,6 +18,8 @@ class FirmsTableSeeder extends Seeder
         $firm->poradniki = 'Brak poradników';
         $firm->koszty = 'Brak kosztów';
         $firm->konto = 0;
+        $firm->kilometry = 0;
+        $firm->paliwo = 0;
         $firm->stawkapusta = 0.1;
         $firm->stawkaladunek = 0.5;
         $firm->stawkafirma = 3;

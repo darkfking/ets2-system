@@ -743,6 +743,8 @@ class RozpiskiController extends Controller
         $fkasa = $kmztowarem * $stawkafirma;
         $fkasakoniec = $fkasa - $kasakoniec;
 
+        $firma->kilometry += $kilometry;
+        $firma->paliwo += $paliwo;
         $firma->konto += $fkasakoniec;
         $firma->save();
 

@@ -20,6 +20,8 @@ class Firms extends Migration
             $table->mediumtext('poradniki');
             $table->mediumtext('koszty');
             $table->double('konto');
+            $table->double('kilometry');
+            $table->double('paliwo');
             $table->float('stawkapusta');
             $table->float('stawkaladunek');
             $table->float('stawkafirma');

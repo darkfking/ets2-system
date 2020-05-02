@@ -36,9 +36,11 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>{{$kilometry}}</td>
-                    <td>{{$spalanie}}</td>
-                    <td>{{$rozile}}</td>
+                    @foreach($firm as $item)
+                      <td>{{$item->kilometry}}</td>
+                      <td>{{$item->paliwo}}</td>
+                      <td>{{$rozile}}</td>
+                    @endforeach
                   </tr>
                 </tbody>
               </table>
