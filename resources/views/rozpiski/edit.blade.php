@@ -45,7 +45,7 @@
                     @endif
                     <div class="form-group">
                         {!! Form::label('miasto2', "Miasto końcowe: ") !!}
-                        {!! Form::select('miasto2', $miasta, null, ['class'=>'form-control']) !!}
+                        {!! Form::select('miasto2', $miasta2, null, ['class'=>'form-control']) !!}
                     </div>
 
                     <div class="form-group">
