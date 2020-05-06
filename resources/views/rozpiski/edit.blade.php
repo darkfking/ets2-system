@@ -32,6 +32,11 @@
                         {!! Form::label('miasto1', "Miasto początkowe: ") !!}
                         {!! Form::select('miasto1', $miasta, null, ['class'=>'form-control']) !!}
                     </div>
+                    <div class="form-group">
+                        {!! Form::label('miasto11', " ") !!}
+                        {!! Form::text('miasto11', null, ['class'=>'form-control']) !!}
+                    </div>
+                    <button class="btn btn-success" id="zmien1">Dodaj recznie</button>
                     @if(Auth::user()->ranga == 'Admin')
                     <div class="form-group">
                         {!! Form::label('kraj2', "Kraj końcowy: ") !!}
@@ -82,4 +87,10 @@
         </div>
     </div>
 </div>
+<script>
+    document.getElementById("miasto11").style.display = "none";
+    document.getElementById("zmien1").addEventListener("click", function() {
+        document.getElementById("miasto1").style.display = "none";
+    });
+</script>
 @endsection
