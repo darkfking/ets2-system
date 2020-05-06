@@ -1653,12 +1653,14 @@ class RozpiskiController extends Controller
 
         $kasapuste = $kmpuste * $stawkapusta;
         $kasaladunek = $kmztowarem * $stawkaladunek;
-        $kasakoniec = $kasapuste + $kasaladunek + $koszty;
+        $kasakoniec = $kasapuste + $kasaladunek;
+
+        $kasakonieckoszty = $kasapuste + $kasaladunek + $koszty;
 
         $kiero->konto += $kasakoniec;
 
         $fkasa = $kmztowarem * $stawkafirma;
-        $fkasakoniec = $fkasa - $kasakoniec;
+        $fkasakoniec = $fkasa - $kasakonieckoszty;
 
         $firma->kilometry += $kilometry;
         $firma->paliwo += $paliwo;

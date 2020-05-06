@@ -60,7 +60,7 @@
                     @foreach ($ogolne as $item)
                   <tr>
                     <td>{{$item->name}}</td>
-                    <td>@if($item->kilometry != 0){{ number_format($item->paliwo / $item->kilometry *100, 2)}} @endif l/km</td>
+                    <td>@if($item->kilometry != 0){{ number_format($item->paliwo / $item->kilometry *100, 2)}} @endif</td>
                   </tr>
                   @endforeach
                 </tbody>
@@ -95,7 +95,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($ogolne as $item)
+                    @foreach ($ogolne1 as $item)
                   <tr>
                     <td>{{$item->name}}</td>
                     <td>{{$item->konto}}</td>
