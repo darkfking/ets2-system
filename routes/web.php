@@ -172,6 +172,11 @@ Route::get('rozpiski/reject/{rozpiska}', [
     'as' => 'rozpiski.reject'
 ]);
 
+Route::delete('rozpiski/{rozpiska}', [
+    'uses' => 'RozpiskiController@destroy',
+    'as' => 'rozpiski.delete'
+]);
+
 Route::resource('firms', 'FirmsController');
 Route::get('change-password', 'ChangePasswordController@index');
 Route::post('change-password', 'ChangePasswordController@store')->name('change.password');

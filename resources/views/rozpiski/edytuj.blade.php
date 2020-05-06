@@ -38,7 +38,10 @@
                         <td>{{$item->kmztowarem}}</td>
                         <td>{{$item->koszty}}</td>
                         <td>{{$item->paliwo}}</td>
-                        <td><a class="btn btn-success btn-block" href="{{route('rozpiski.edit', $item)}}">Edytuj</a></td>
+                        <td><a class="btn btn-success btn-block" href="{{route('rozpiski.edit', $item)}}">Edytuj</a>
+                            {!! Form::model($item, ['route' => ['rozpiski.delete', $item], 'method' => 'DELETE']) !!}
+                            <button class="btn btn-danger">Usuń</button>
+                        {!! Form::close() !!} </td>
                     </tr>
                     @endforeach
                 </tbody>

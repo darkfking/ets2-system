@@ -37,6 +37,7 @@ class Rozpiski extends Migration
     public function down()
     {
         Schema::drop('rozpiskis');
+        Schema::dropIfExists('rozpiskis');
     }
 }
 

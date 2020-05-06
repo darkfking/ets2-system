@@ -1626,10 +1626,15 @@ class RozpiskiController extends Controller
     }
     public function edytuj ()
     {
-        $allroz = Rozpiski::where('status', '0')->orderBy('kierowca', 'DESC')->get();
+        $allroz = Rozpiski::orderBy('kierowca', 'DESC')->get();
         return view('rozpiski.edytuj', compact('allroz'));
     }
 
+    public function destroy(Rozpiski $rozpiska)
+    {
+        $rozpiska->delete();
+        return redirect()->route('rozpiski.edytuj');
+    }
     /**
      * Update the specified resource in storage.
      *
@@ -1649,8 +1654,5 @@ class RozpiskiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
+   
 }
