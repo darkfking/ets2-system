@@ -16,7 +16,7 @@
                     <h2 class="float-left">{{ $item->nazwa }}</h2>
                     <h2 class="float-right">{{ $item->nr }}</h2>
                 </div>
-                <div class="card-body">
+                <div class="card-body text-center">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
