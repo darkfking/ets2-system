@@ -613,7 +613,7 @@ class RozpiskiController extends Controller
             
             );
         }
-        elseif($rozpiska->kraj1 == 'Lichtenstein')
+        elseif($rozpiska->kraj1 == 'Liechtenstein')
         {
             $miasta = array('Vaduz' =>'Vaduz', 
             );
@@ -882,7 +882,20 @@ class RozpiskiController extends Controller
             'Olomouc' =>'Olomouc', 
             );
         }
-
+        elseif($rozpiska->kraj2 == "Finlandia")
+        {
+            $miasta2 = array('Helsinki' =>'Helsinki', 
+            'Kotka' =>'Kotka', 
+            'Kouvola' =>'Kouvola', 
+            'Lahti' =>'Lahti', 
+            'Loviisa' =>'Loviisa', 
+            'Naantali' =>'Naantali', 
+            'Olkiluoto' =>'Olkiluoto', 
+            'Pori' =>'Pori', 
+            'Tampere' =>'Tampere', 
+            'Turku' =>'Turku', 
+            );
+        }
         elseif($rozpiska->kraj2 == 'Francja')
         {
             $miasta2 = array('Calais' =>'Calais', 
@@ -1341,7 +1354,7 @@ class RozpiskiController extends Controller
             
             );
         }
-        elseif($rozpiska->kraj2 == 'Lichtenstein')
+        elseif($rozpiska->kraj2 == 'Liechtenstein')
         {
             $miasta2 = array('Vaduz' =>'Vaduz', 
             );
