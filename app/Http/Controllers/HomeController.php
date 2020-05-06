@@ -28,10 +28,11 @@ class HomeController extends Controller
     public function index()
     {
         $firm = Firms::all();
+        $ogolnep = DB::table('users')->orderBy('paliwo', 'DESC')->orderBy('kilometry','ASC')->get();
         $ogolne = DB::table('users')->orderBy('kilometry', 'DESC')->get();
         $ogolne1 = DB::table('users')->orderBy('konto', 'DESC')->get();
         $rozpiski = Rozpiski::where('status', '2')->get();
-        return view('home')->with(compact(['firm', 'ogolne', 'ogolne1','rozpiski']));
+        return view('home')->with(compact(['firm', 'ogolne', 'ogolne1','ogolnep','rozpiski']));
     }
 
     public function admin()

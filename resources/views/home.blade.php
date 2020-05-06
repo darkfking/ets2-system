@@ -49,7 +49,7 @@
 
     <div class="row justify-content-center mt-5">
         <div class="col-md-4">
-            <table class="table text-center table-responsive-xl">
+            <table class="table text-center table-responsive-xl sortable" id="sr">
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col">Nick</th>
@@ -57,7 +57,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($ogolne as $item)
+                    @foreach ($ogolnep as $item)
                   <tr>
                     <td>{{$item->name}}</td>
                     <td>@if($item->kilometry != 0){{ number_format($item->paliwo / $item->kilometry *100, 2)}} @endif</td>
@@ -68,7 +68,7 @@
         </div>
 
         <div class="col-md-4">
-            <table class="table text-center table-responsive-xl">
+            <table class="table text-center table-responsive-xl sortable">
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col">Nick</th>
@@ -87,7 +87,7 @@
         </div>
 
         <div class="col-md-4">
-            <table class="table text-center table-responsive-xl">
+            <table class="table text-center table-responsive-xl sortable">
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col">Nick</th>
@@ -106,4 +106,9 @@
         </div>
     </div>
 </div>
+<script>
+  $(document).ready( function () {
+    $('#sr').DataTable();
+} );
+</script>
 @endsection
