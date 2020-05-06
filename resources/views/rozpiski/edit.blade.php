@@ -32,11 +32,12 @@
                         {!! Form::label('miasto1', "Miasto początkowe: ") !!}
                         {!! Form::select('miasto1', $miasta, null, ['class'=>'form-control']) !!}
                     </div>
-                    <div class="form-group">
-                        {!! Form::label('miasto11', " ") !!}
+                    <div class="form-group col-6">
+                        {!! Form::label('miasto11', "Dodaj miasto do listy:") !!}
                         {!! Form::text('miasto11', null, ['class'=>'form-control']) !!}
+                        
                     </div>
-                    <button class="btn btn-success" id="zmien1">Dodaj recznie</button>
+                    <a class="btn btn-primary" onclick="addOption()" id="zmien1">Dodaj miasto</a>
                     @if(Auth::user()->ranga == 'Admin')
                     <div class="form-group">
                         {!! Form::label('kraj2', "Kraj końcowy: ") !!}
@@ -52,7 +53,12 @@
                         {!! Form::label('miasto2', "Miasto końcowe: ") !!}
                         {!! Form::select('miasto2', $miasta2, null, ['class'=>'form-control']) !!}
                     </div>
-
+                    <div class="form-group col-6">
+                        {!! Form::label('miasto22', "Dodaj miasto do listy:") !!}
+                        {!! Form::text('miasto22', null, ['class'=>'form-control']) !!}
+                        
+                    </div>
+                    <a class="btn btn-primary" onclick="addOption2()" id="zmien2">Dodaj miasto</a>
                     <div class="form-group">
                         {!! Form::label('kmpuste', "Kilometry puste: ") !!}
                         {!! Form::text('kmpuste', $rozpiska->kmpuste, ['class'=>'form-control']) !!}
@@ -88,9 +94,25 @@
     </div>
 </div>
 <script>
-    document.getElementById("miasto11").style.display = "none";
-    document.getElementById("zmien1").addEventListener("click", function() {
-        document.getElementById("miasto1").style.display = "none";
-    });
+    function addOption() { 
+    $('#miasto11').keyup(function() {
+        var value = $(this).val();
+        $('#miasto1').append(`<option value="${value}"> 
+                                   ${value} 
+                              </option>`);
+    }).keyup();  
+    $('#miasto11').hide();
+    $('#zmien1').hide();
+    } 
+    function addOption2() { 
+    $('#miasto22').keyup(function() {
+        var value1 = $(this).val();
+        $('#miasto2').append(`<option value="${value1}"> 
+                                   ${value1} 
+                              </option>`);
+    }).keyup();  
+    $('#miasto22').hide();
+    $('#zmien2').hide();
+    } 
 </script>
 @endsection
