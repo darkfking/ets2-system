@@ -56,6 +56,7 @@ class RozpiskiController extends Controller
         $going = array("Węgry");
         $skan = array("Szwecja");
         $rus = array("Białoruś", "Rosja");
+        $blacksea = array("Turcja", "Rumunia");
 
         if(Auth::user()->going == 1) {
             $podstawka = array_merge($podstawka, $going);
@@ -68,6 +69,9 @@ class RozpiskiController extends Controller
         }
         if(Auth::user()->promods == 1) {
             $podstawka = array_merge($podstawka, $promods);
+        }
+        if(Auth::user()->blacksea == 1) {
+            $podstawka = array_merge($podstawka, $blacksea);
         }
 
         $kraje = array("Polska", "Niemcy", "Holandia", "Belgia");
@@ -128,6 +132,13 @@ class RozpiskiController extends Controller
             $miasta = array('Bruksela' =>'Bruksela', 
             'Liege' =>'Liege', 
             'Antwerp' =>'Antwerp', 
+            );
+        }
+        elseif($rozpiska->kraj1 == 'Turcja')
+        {
+            $miasta = array('Edirne' =>'Edirne', 
+            'Istanbul' =>'Istanbul', 
+            'Tekirdag' =>'Tekirdag', 
             );
         }
         elseif($rozpiska->kraj1 == 'Czechy')
@@ -957,6 +968,13 @@ class RozpiskiController extends Controller
             'Groningen' =>'Groningen', 
             'Ijmuiden' =>'Ijmuiden', 
             'Rotterdam' =>'Rotterdam', 
+            );
+        }
+        elseif($rozpiska->kraj2 == 'Turcja')
+        {
+            $miasta2 = array('Edirne' =>'Edirne', 
+            'Istanbul' =>'Istanbul', 
+            'Tekirdag' =>'Tekirdag', 
             );
         }
         elseif($rozpiska->kraj2 == 'Luxembourg')
