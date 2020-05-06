@@ -847,6 +847,9 @@ class RozpiskiController extends Controller
             'Vaxjo' =>'Vaxjo', 
              
             );
+        }
+        else {
+            $miasta = array();
         }            
 
         //MIASTA 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -1588,6 +1591,9 @@ class RozpiskiController extends Controller
             'Vaxjo' =>'Vaxjo', 
              
             );
+        }
+        else {
+            $miasta2 = array();
         }            
         return view('rozpiski.edit')->with(compact(['rozpiska', 'miasta', 'miasta2']));
     }
