@@ -140,6 +140,20 @@ class RozpiskiController extends Controller
             'Olomouc' =>'Olomouc', 
             );
         }
+        elseif($rozpiska->kraj1 == "Finlandia")
+        {
+            $miasta = array('Helsinki' =>'Helsinki', 
+            'Kotka' =>'Kotka', 
+            'Kouvola' =>'Kouvola', 
+            'Lahti' =>'Lahti', 
+            'Loviisa' =>'Loviisa', 
+            'Naantali' =>'Naantali', 
+            'Olkiluoto' =>'Olkiluoto', 
+            'Pori' =>'Pori', 
+            'Tampere' =>'Tampere', 
+            'Turku' =>'Turku', 
+            );
+        }
 
         elseif($rozpiska->kraj1 == 'Francja')
         {
