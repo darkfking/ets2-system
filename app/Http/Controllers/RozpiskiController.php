@@ -1626,7 +1626,7 @@ class RozpiskiController extends Controller
     }
     public function edytuj ()
     {
-        $allroz = Rozpiski::orderBy('kierowca', 'DESC')->get();
+        $allroz = Rozpiski::where('status','0')->orderBy('kierowca', 'DESC')->get();
         return view('rozpiski.edytuj', compact('allroz'));
     }
 
