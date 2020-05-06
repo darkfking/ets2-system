@@ -101,9 +101,11 @@
           </tr>
         </thead>
         <tbody>
+            <?php $liczba = 0;?>
         @foreach ($users as $item)
+            <?php $liczba++; ?>
           <tr>
-            <th scope="row">{{$item->id}}</th>
+            <th scope="row">{{$liczba}}</th>
             <td>{{$item->name}}</td>
             <td>
                 {{$item->ranga}} 
