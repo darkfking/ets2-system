@@ -31,7 +31,13 @@
   overflow-x: hidden;
   padding-top: 20px;
 }
-
+ .sidenav p {
+     position: fixed;
+     bottom: 0;
+     color: #818181;
+     padding: 5px;
+     margin-left: 10px;
+ }
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;

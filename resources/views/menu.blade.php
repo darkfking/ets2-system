@@ -7,4 +7,5 @@
     <a href="{{route('karta')}}">Karta kierowcy</a>
     <a href="{{route('cars.index')}}">Garaż</a>
     <a href="{{route('firms.index')}}">Firma</a>
+    <p href="hf">Created by <font color="#00ffff">eqqiz</font></p>
 </div>
