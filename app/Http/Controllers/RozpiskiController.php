@@ -76,11 +76,14 @@ class RozpiskiController extends Controller
 
         $kraje = array("Polska", "Niemcy", "Holandia", "Belgia");
         $losuj_kraj=array_rand($podstawka,2);
-        for($i = 0; $i<5; $i++) {
+        $rj = $podstawka[array_rand($podstawka)];
+        $rd = $podstawka[array_rand($podstawka)];
+        $rt = $podstawka[array_rand($podstawka)];
+        $rc = $podstawka[array_rand($podstawka)];
             $rozpiska = new Rozpiski;
-            $rozpiska->kraj1 = $podstawka[array_rand($podstawka)];
+            $rozpiska->kraj1 = 'Polska';
             $rozpiska->miasto1 = '';
-            $rozpiska->kraj2 = $podstawka[array_rand($podstawka)];
+            $rozpiska->kraj2 = $rj;
             $rozpiska->miasto2 = '';
             $rozpiska->kmpuste = '';
             $rozpiska->kmztowarem = '';
@@ -89,7 +92,59 @@ class RozpiskiController extends Controller
             $rozpiska->kierowca = Auth::user()->name;
             $rozpiska->status = '0';
             $rozpiska->save();
-        }
+
+            $rozpiska = new Rozpiski;
+            $rozpiska->kraj1 = $rj;
+            $rozpiska->miasto1 = '';
+            $rozpiska->kraj2 = $rd;
+            $rozpiska->miasto2 = '';
+            $rozpiska->kmpuste = '';
+            $rozpiska->kmztowarem = '';
+            $rozpiska->koszty = '';
+            $rozpiska->paliwo = '';
+            $rozpiska->kierowca = Auth::user()->name;
+            $rozpiska->status = '0';
+            $rozpiska->save();
+
+            $rozpiska = new Rozpiski;
+            $rozpiska->kraj1 = $rd;
+            $rozpiska->miasto1 = '';
+            $rozpiska->kraj2 = $rt;
+            $rozpiska->miasto2 = '';
+            $rozpiska->kmpuste = '';
+            $rozpiska->kmztowarem = '';
+            $rozpiska->koszty = '';
+            $rozpiska->paliwo = '';
+            $rozpiska->kierowca = Auth::user()->name;
+            $rozpiska->status = '0';
+            $rozpiska->save();
+
+            $rozpiska = new Rozpiski;
+            $rozpiska->kraj1 = $rt;
+            $rozpiska->miasto1 = '';
+            $rozpiska->kraj2 = $rc;
+            $rozpiska->miasto2 = '';
+            $rozpiska->kmpuste = '';
+            $rozpiska->kmztowarem = '';
+            $rozpiska->koszty = '';
+            $rozpiska->paliwo = '';
+            $rozpiska->kierowca = Auth::user()->name;
+            $rozpiska->status = '0';
+            $rozpiska->save();
+
+            $rozpiska = new Rozpiski;
+            $rozpiska->kraj1 = $rc;
+            $rozpiska->miasto1 = '';
+            $rozpiska->kraj2 = 'Polska';
+            $rozpiska->miasto2 = '';
+            $rozpiska->kmpuste = '';
+            $rozpiska->kmztowarem = '';
+            $rozpiska->koszty = '';
+            $rozpiska->paliwo = '';
+            $rozpiska->kierowca = Auth::user()->name;
+            $rozpiska->status = '0';
+            $rozpiska->save();
+
         return redirect()->route('rozpiski.index');
     }
 
