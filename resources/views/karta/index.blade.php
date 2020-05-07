@@ -40,7 +40,7 @@
               <div class="col-xl-3 col-md-6">
                 <div class="card bg-danger text-white mb-4 p-0" style="height:180px;">
                     <h2 class="card-body text-center text-dark">Średnie spalanie</h2>
-                    <h1 class="text-center text-white">@if($item->kilometry != 0){{number_format($item->kilometry / $item->paliwo, 2)}} @endif l/km</h1>                                    
+                    <h1 class="text-center text-white">@if($item->kilometry != 0){{ number_format($item->paliwo / $item->kilometry *100, 2)}} @endif</h1>                                    
                 </div>
               </div>
             </div>
